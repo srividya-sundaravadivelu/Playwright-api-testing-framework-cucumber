@@ -1,0 +1,17 @@
+# Node modules
+node_modules/
+
+# Playwright test results
+test-results/
+reports/
+
+# Playwright traces, screenshots, videos
+trace/
+screenshots/
+videos/
+# Local environment variables
+.env
+.env.*  # optional, for multiple environments
+
+# Local config files containing secrets
+src/config/env.config.js

@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js --require features/**/*.js --format html:reports/cucumber-report.html"
+   
+    "test": "cucumber-js \"features/**/*.feature\" --require \"features/**/*.js\" --format html:reports/cucumber-report.html"
+
   },
   "keywords": [],
   "author": "",

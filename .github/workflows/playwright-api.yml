@@ -29,7 +29,7 @@ jobs:
           node-version: 22
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run API tests
         id: tests
@@ -39,27 +39,24 @@ jobs:
       - name: Prepare report files
         if: ${{ !cancelled() }}
         run: |
-          mkdir -p public/reports public/cucumber-report
+          mkdir -p public/reports 
 
           if [ -d reports ]; then
             cp -R reports/. public/reports/
-          fi
-
-          if [ -d cucumber-report ]; then
-            cp -R cucumber-report/. public/cucumber-report/
-          fi
+          fi         
 
           cat > public/index.html <<'EOF'
           <!DOCTYPE html>
-          <html>
+          <html lang="en">
           <head>
+            <meta charset="UTF-8">
             <title>Cucumber API Test Report</title>
           </head>
           <body>
             <h1>Cucumber API Test Report</h1>
             <p>Report files published from GitHub Actions.</p>
             <ul>
-              <li><a href="reports/cucumber-report.html">Open cucumber-report</a></li>
+              <li><a href="reports/cucumber-report.html">View Cucumber HTML Report</a></li>
 
             </ul>
           </body>
@@ -74,8 +71,7 @@ jobs:
         with:
           name: cucumber-report
           path: |
-            reports/
-            cucumber-report/
+            reports/            
             public/
           if-no-files-found: warn
           retention-days: 30

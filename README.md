@@ -64,6 +64,7 @@ Playwright-api-testing-framework-cucumber
 * Cucumber hooks and shared World
 * HTML reporting
 * CI execution via GitHub Actions
+* Deploy Cucumber HTML report to GitHub Pages
 
 ---
 
@@ -143,7 +144,7 @@ Tests run automatically on:
 * Pull requests
 * Manual trigger (`workflow_dispatch`)
 
-Cucumber reports are uploaded as workflow artifacts.
+Cucumber reports are uploaded as workflow artifacts. Also they are deployed to GitHub Pages for direct viewing.
 
 ---
 

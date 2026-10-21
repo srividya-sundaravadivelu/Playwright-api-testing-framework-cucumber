@@ -59,8 +59,8 @@ jobs:
             <h1>Cucumber API Test Report</h1>
             <p>Report files published from GitHub Actions.</p>
             <ul>
-              <li><a href="reports/index.html">Open reports/index.html</a></li>
-              <li><a href="cucumber-report/index.html">Open cucumber-report/index.html</a></li>
+              <li><a href="reports/cucumber-report.html">Open cucumber-report</a></li>
+
             </ul>
           </body>
           </html>
